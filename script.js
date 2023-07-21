@@ -63,7 +63,7 @@ function renderContacts(){
         <p>
             ${contacts[count].phone2}
         </p>
-        <p class="edit"  onclick ="editContactF('${contacts[count].phone1}')">
+        <p class="edit"  onclick ="editContactF('${contacts[count].user_name}','${contacts[count].phone1}','${contacts[count].phone2}')">
           
             <i class="fas fa-edit"></i>
         </p>
@@ -73,7 +73,6 @@ function renderContacts(){
         </p>
         
     </div>`;
-       
        
     }
     
@@ -89,8 +88,12 @@ function deleteContactF(phone1){
     renderContacts();
  
 }
-function editContactF(){
-    Contact.editContact();
+function editContactF(user_name,phone1,phone2){
+    console.log("..")
+    form.user_name.value = user_name;
+    form.phone1.value = phone1;
+    form.phone2.value = phone2;
+    
 }
 
 form.addEventListener("submit",(e)=>{
