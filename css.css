@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+.contacts{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95vw;
+}
+.heading, .contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.heading{
+    padding: 18px;
+    background-color: rgb(24, 91, 109);
+    color: #fff;
+
+}
+
+.form{
+    margin-top: 5%;
+    background-color: rgb(250, 247, 243);
+    height: 45vh;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+input[type="submit"]{
+     background-color: rgb(24, 91, 109);
+     color: #fff;
+     padding: 8px;
+     cursor: pointer;
+     border: solid #fff 2px;
+}
+.form-group{
+    display: flex;
+   
+}
+.form-group label{
+    flex: 1;
+}
+.form-group input{
+    flex: 1;
+}
+input[type="text"],input[type="tel"]{
+    padding: 8px;
+
+}
+.del, .edit{
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width:600px) {
+
+    .contacts div{
+        width: 60vw;
+    }
+
+    
+}
