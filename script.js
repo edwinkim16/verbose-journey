@@ -42,6 +42,20 @@ class Contact{
         
 
     }
+    static editContact(phone1){
+        let storedContacts = this.getContacts();
+        console.log(storedContacts)
+        let index;
+        for(var count=0; count<storedContacts.length; count++){
+            if(storedContacts[count].phone1 == phone1){
+                index = count;
+            }
+        }
+        storedContacts.splice(index,1);
+        console.log(storedContacts)
+        localStorage.setItem("contacts", JSON.stringify(storedContacts));
+    }
+
 
 }
 
@@ -93,7 +107,12 @@ function editContactF(user_name,phone1,phone2){
     form.user_name.value = user_name;
     form.phone1.value = phone1;
     form.phone2.value = phone2;
+    Contact.editContact(phone1);
+
     
+
+
+
 }
 
 form.addEventListener("submit",(e)=>{
